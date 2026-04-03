@@ -303,6 +303,10 @@ h2 {
     transform 0.25s ease;
 }
 
+.footer-credit strong {
+  font-weight: 900;
+}
+
 .footer-credit::before,
 .footer-credit::after {
   content: "";
