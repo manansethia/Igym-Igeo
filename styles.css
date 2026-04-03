@@ -286,14 +286,20 @@ h2 {
 
 .footer-credit {
   position: relative;
-  display: inline-block;
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 900;
   color: #6f4b2f;
   text-decoration: none;
   text-shadow: none;
+  cursor: pointer;
+  padding: 0.05rem 0.2rem;
+  border-radius: 999px;
   transition:
     color 0.25s ease,
+    background-color 0.25s ease,
     text-shadow 0.25s ease,
+    box-shadow 0.25s ease,
     transform 0.25s ease;
 }
 
@@ -302,31 +308,37 @@ h2 {
   content: "";
   position: absolute;
   top: 50%;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background:
-    radial-gradient(circle, rgba(227, 190, 117, 0.95) 0%, rgba(227, 190, 117, 0) 72%);
+    radial-gradient(circle, rgba(227, 190, 117, 0.98) 0%, rgba(227, 190, 117, 0) 72%);
   opacity: 0;
   pointer-events: none;
+  box-shadow: 0 0 18px rgba(227, 190, 117, 0.5);
   transform: translateY(-50%) scale(0.6);
 }
 
 .footer-credit::before {
-  left: -14px;
+  left: -10px;
 }
 
 .footer-credit::after {
-  right: -14px;
+  right: -10px;
 }
 
 .footer-credit:hover,
 .footer-credit:focus-visible {
   color: #7b5332;
+  background-color: rgba(227, 190, 117, 0.12);
   text-decoration: none;
   text-shadow:
-    0 0 0.5px #e3be75,
-    0 0 9px rgba(227, 190, 117, 0.38);
+    -0.4px 0 #e3be75,
+    0.4px 0 #e3be75,
+    0 -0.4px #e3be75,
+    0 0.4px #e3be75,
+    0 0 10px rgba(227, 190, 117, 0.35);
+  box-shadow: 0 0 0 1px rgba(227, 190, 117, 0.35);
   transform: translateY(-1px);
 }
 
@@ -347,7 +359,7 @@ h2 {
     transform: translateY(-50%) translateX(0) scale(0.7);
   }
   100% {
-    transform: translateY(-50%) translateX(5px) scale(1.1);
+    transform: translateY(-50%) translateX(7px) scale(1.2);
   }
 }
 
